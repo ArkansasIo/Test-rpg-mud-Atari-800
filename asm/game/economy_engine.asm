@@ -1,5 +1,25 @@
-; Economy transaction engine
-ECONOMY_BUY: RTS
-ECONOMY_SELL: RTS
-ECONOMY_TRADE: RTS
-ECONOMY_AWARD: RTS
+; Economy balance primitives
+ECONOMY_BALANCE:.res 4
+ECONOMY_AMOUNT:.res 4
+ECONOMY_AWARD:
+        LDA ECONOMY_AMOUNT
+        CLC
+        ADC ECONOMY_BALANCE
+        STA ECONOMY_BALANCE
+        RTS
+ECONOMY_BUY:
+        LDA ECONOMY_BALANCE
+        CMP ECONOMY_AMOUNT
+        BCC ECON_FAIL
+        SEC
+        SBC ECONOMY_AMOUNT
+        STA ECONOMY_BALANCE
+        LDA #0
+        RTS
+ECON_FAIL:
+        LDA #1
+        RTS
+ECONOMY_SELL:
+        JMP ECONOMY_AWARD
+ECONOMY_TRADE:
+        RTS
