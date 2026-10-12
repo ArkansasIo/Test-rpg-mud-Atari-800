@@ -1,0 +1,4 @@
+; Data-driven world triggers
+TRIGGER_MATCH: RTS
+TRIGGER_EXECUTE: RTS
+TRIGGER_COOLDOWN: RTS
