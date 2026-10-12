@@ -1,0 +1,6 @@
+; Item definitions and inventory objects
+ITEM_CREATE: RTS
+ITEM_IDENTIFY: RTS
+ITEM_BIND: RTS
+ITEM_DESTROY: RTS
+ITEM_SOCKET: RTS
