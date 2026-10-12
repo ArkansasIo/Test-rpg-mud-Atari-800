@@ -1,0 +1,11 @@
+[client]
+host=127.0.0.1
+port=3306
+database=rpgmud
+user=rpgmud
+# password must be supplied through a protected secret mechanism
+
+[mysqld]
+character-set-server=utf8mb4
+collation-server=utf8mb4_unicode_ci
+max_connections=64
