@@ -1,0 +1,5 @@
+; XP, levels, talents and mastery
+XP_ADD: RTS
+LEVEL_CHECK: RTS
+TALENT_APPLY: RTS
+MASTERY_GAIN: RTS
