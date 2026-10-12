@@ -1,0 +1,23 @@
+name: RPGMUD Production Tree
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  generate-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate missing production files
+        run: python3 tools/generate_project_tree.py
+
+      - name: Validate manifest
+        run: python3 tools/validate_manifest.py
+
+      - name: Verify clean generation
+        run: git diff --exit-code
