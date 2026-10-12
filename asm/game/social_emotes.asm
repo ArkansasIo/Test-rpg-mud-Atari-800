@@ -1,0 +1,4 @@
+; Named social/emote actions
+SOCIAL_LOOKUP: RTS
+SOCIAL_EXECUTE: RTS
+SOCIAL_BROADCAST: RTS
