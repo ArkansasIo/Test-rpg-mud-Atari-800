@@ -1,0 +1,6 @@
+; Administrative command dispatcher
+ADMIN_WHO: RTS
+ADMIN_MUTE: RTS
+ADMIN_BAN: RTS
+ADMIN_FORCE_SAVE: RTS
+ADMIN_SHUTDOWN: RTS
