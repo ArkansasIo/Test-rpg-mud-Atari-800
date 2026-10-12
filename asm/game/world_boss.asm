@@ -1,0 +1,4 @@
+; Persistent world-boss state
+WORLD_BOSS_SPAWN: RTS
+WORLD_BOSS_PHASE: RTS
+WORLD_BOSS_DEFEAT: RTS
