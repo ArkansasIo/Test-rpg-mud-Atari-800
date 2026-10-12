@@ -1,0 +1,4 @@
+; Faction/reputation
+FACTION_JOIN: RTS
+FACTION_REP_ADD: RTS
+FACTION_RANK: RTS
