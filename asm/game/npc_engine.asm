@@ -1,0 +1,5 @@
+; NPC/mobile update engine
+NPC_SPAWN: RTS
+NPC_UPDATE: RTS
+NPC_DESPAWN: RTS
+NPC_AGGRO: RTS
