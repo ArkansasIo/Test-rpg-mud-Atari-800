@@ -1,0 +1,5 @@
+; Shop inventory and transactions
+SHOP_STOCK_LOAD: RTS
+SHOP_BUY: RTS
+SHOP_SELL: RTS
+SHOP_RESTOCK: RTS
