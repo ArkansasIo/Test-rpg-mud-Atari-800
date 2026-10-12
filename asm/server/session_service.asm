@@ -1,0 +1,13 @@
+; Session lifecycle
+SESSION_NEW:
+        JSR DESCRIPTOR_ALLOC
+        RTS
+SESSION_CLOSE:
+        JSR DESCRIPTOR_RELEASE
+        RTS
+SESSION_INPUT:
+        JSR INPUTQ_PUSH
+        RTS
+SESSION_OUTPUT:
+        JSR OUTPUTQ_PUSH
+        RTS
