@@ -1,0 +1,21 @@
+; RPGMUD database configuration
+DB_ENGINE_MYSQL=1
+DB_DEFAULT_PORT=3306
+DB_ENGINE: .byte DB_ENGINE_MYSQL
+DB_HOST_PTR_LO: .byte 0
+DB_HOST_PTR_HI: .byte 0
+DB_PORT: .word DB_DEFAULT_PORT
+DB_NAME_PTR_LO: .byte 0
+DB_NAME_PTR_HI: .byte 0
+DB_USER_PTR_LO: .byte 0
+DB_USER_PTR_HI: .byte 0
+DB_PASS_PTR_LO: .byte 0
+DB_PASS_PTR_HI: .byte 0
+DB_CONNECT_TIMEOUT: .word 10
+DB_QUERY_TIMEOUT: .word 30
+DB_CONFIG_INIT:
+        LDA #DB_DEFAULT_PORT
+        STA DB_PORT
+        LDA #0
+        STA DB_PORT+1
+        RTS
