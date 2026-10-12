@@ -1,0 +1,5 @@
+; Authoritative room/world engine
+WORLD_ENTER: RTS
+WORLD_LEAVE: RTS
+WORLD_MOVE: RTS
+WORLD_LOOK: RTS
