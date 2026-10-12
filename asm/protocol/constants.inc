@@ -1,0 +1,8 @@
+; Shared protocol constants
+RPGMUD_VERSION = 1
+PKT_AUTH = $01
+PKT_LOOK = $02
+PKT_MOVE = $03
+PKT_SAY = $04
+PKT_ATTACK = $05
+PKT_EVENT = $80
