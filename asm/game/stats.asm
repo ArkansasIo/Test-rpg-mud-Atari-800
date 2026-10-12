@@ -11,6 +11,7 @@ STAT_COUNT=8
 STAT_MIN=1
 STAT_MAX=255
 STATS:.res STAT_COUNT
+
 STATS_INIT:
         LDX #0
         LDA #10
@@ -20,6 +21,7 @@ SI_LOOP:
         CPX #STAT_COUNT
         BNE SI_LOOP
         RTS
+
 ; A=stat value. Returns signed two's-complement modifier in A.
 STATS_MODIFIER:
         CMP #10
@@ -27,11 +29,14 @@ STATS_MODIFIER:
         LDX #0
 SM_LOW:
         CMP #10
-        BCS SM_DONE
+        BCS SM_LOW_DONE
         CLC
         ADC #2
         DEX
         JMP SM_LOW
+SM_LOW_DONE:
+        TXA
+        RTS
 SM_HIGH:
         LDX #0
 SM_HIGH_LOOP:
@@ -43,7 +48,7 @@ SM_HIGH_LOOP:
         JMP SM_HIGH_LOOP
 SM_HIGH_DONE:
         TXA
-SM_DONE:
         RTS
+
 STATS_DERIVE:
         RTS
