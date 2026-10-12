@@ -1,0 +1,6 @@
+; Shared UI/event identifiers
+EVENT_ROOM = $81
+EVENT_STATUS = $82
+EVENT_COMBAT = $83
+EVENT_INVENTORY = $84
+EVENT_CHAT = $85
