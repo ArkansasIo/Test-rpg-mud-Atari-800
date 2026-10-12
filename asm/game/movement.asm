@@ -1,0 +1,5 @@
+; Character movement and room broadcasts
+MOVE_VALIDATE: RTS
+MOVE_CHARACTER: RTS
+MOVE_FOLLOWERS: RTS
+MOVE_BROADCAST: RTS
