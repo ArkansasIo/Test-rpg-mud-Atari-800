@@ -1,0 +1,7 @@
+; World persistence service
+WORLD_LOAD: JSR SERIALIZE_VALIDATE
+        RTS
+WORLD_SAVE: JSR DB_TXN_BEGIN
+        JSR JOURNAL_WRITE
+        JSR DB_TXN_COMMIT
+        RTS
