@@ -1,0 +1,11 @@
+; Text command dispatcher
+CMD_LOOK = 1
+CMD_MOVE = 2
+CMD_SAY = 3
+CMD_ATTACK = 4
+CMD_CAST = 5
+CMD_INVENTORY = 6
+CMD_WHO = 7
+CMD_QUIT = 8
+COMMAND_DISPATCH:
+        RTS
