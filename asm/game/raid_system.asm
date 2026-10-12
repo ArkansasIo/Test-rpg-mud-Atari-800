@@ -1,0 +1,5 @@
+; Raid group management
+RAID_CREATE: RTS
+RAID_INVITE: RTS
+RAID_ROLE: RTS
+RAID_READY: RTS
