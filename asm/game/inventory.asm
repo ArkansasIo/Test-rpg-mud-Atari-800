@@ -1,0 +1,41 @@
+; Bounded inventory slots
+INVENTORY_SLOTS=32
+INVENTORY_EMPTY=0
+INVENTORY_FULL=4
+INVENTORY_SLOT:.res INVENTORY_SLOTS
+INVENTORY_ITEM:.res INVENTORY_SLOTS
+INVENTORY_INIT:
+        LDX #0
+        LDA #INVENTORY_EMPTY
+II_LOOP:
+        STA INVENTORY_SLOT,X
+        INX
+        CPX #INVENTORY_SLOTS
+        BNE II_LOOP
+        RTS
+INVENTORY_INSERT:
+        LDX #0
+IN_FIND:
+        CPX #INVENTORY_SLOTS
+        BCS IN_FULL
+        LDA INVENTORY_SLOT,X
+        BEQ IN_USE
+        INX
+        JMP IN_FIND
+IN_USE:
+        LDA #1
+        STA INVENTORY_SLOT,X
+        TXA
+        RTS
+IN_FULL:
+        LDA #INVENTORY_FULL
+        RTS
+INVENTORY_REMOVE:
+        CPX #INVENTORY_SLOTS
+        BCS IR_BAD
+        LDA #0
+        STA INVENTORY_SLOT,X
+        RTS
+IR_BAD:
+        LDA #1
+        RTS
