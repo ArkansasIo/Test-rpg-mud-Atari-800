@@ -1,0 +1,4 @@
+; Safe command aliases
+ALIAS_LOOKUP: RTS
+ALIAS_EXPAND: RTS
+ALIAS_VALIDATE: RTS
