@@ -1,0 +1,5 @@
+; Bounded command tokenizer and dispatcher interface
+PARSER_RESET: RTS
+PARSER_TOKENIZE: RTS
+PARSER_VALIDATE_LENGTH: RTS
+PARSER_DISPATCH: RTS
