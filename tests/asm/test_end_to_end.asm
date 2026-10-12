@@ -1,0 +1,10 @@
+; End-to-end gameplay path
+TEST_LOGIN_TO_SAVE:
+        JSR SESSION_NEW
+        JSR SESSION_AUTHENTICATED
+        JSR SESSION_ENTER_WORLD
+        JSR WORLD_ENTER
+        JSR COMBAT_APPLY
+        JSR CHAR_SAVE
+        JSR SESSION_CLOSE
+        RTS
