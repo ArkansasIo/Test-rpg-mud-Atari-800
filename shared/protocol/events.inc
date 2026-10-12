@@ -1,0 +1,14 @@
+; Server-to-client event identifiers
+EVT_CHARACTER = $A0
+EVT_STATS = $A1
+EVT_QUEST = $A2
+EVT_COMBAT = $A3
+EVT_LOOT = $A4
+EVT_PARTY = $A5
+EVT_GUILD = $A6
+EVT_WORLD = $A7
+EVT_DUNGEON = $A8
+EVT_RAID = $A9
+EVT_CHAT = $AA
+EVT_MAIL = $AB
+EVT_MARKET = $AC
