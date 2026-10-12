@@ -1,0 +1,4 @@
+; Recipe database interface
+RECIPE_LOOKUP: RTS
+RECIPE_VALIDATE: RTS
+RECIPE_OUTPUT: RTS
