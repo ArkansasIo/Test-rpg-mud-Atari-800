@@ -1,0 +1,4 @@
+; Learned skill state
+SKILL_LEARN: RTS
+SKILL_CHECK: RTS
+SKILL_IMPROVE: RTS
