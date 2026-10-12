@@ -1,0 +1,57 @@
+CREATE TABLE IF NOT EXISTS characters (
+  character_id BIGINT UNSIGNED NOT NULL,
+  account_id BIGINT UNSIGNED NOT NULL,
+  name VARCHAR(32) NOT NULL,
+  level SMALLINT UNSIGNED NOT NULL DEFAULT 1,
+  experience BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  hp INT NOT NULL DEFAULT 1,
+  max_hp INT NOT NULL DEFAULT 1,
+  mana INT NOT NULL DEFAULT 0,
+  max_mana INT NOT NULL DEFAULT 0,
+  room_id BIGINT NOT NULL DEFAULT 0,
+  flags INT UNSIGNED NOT NULL DEFAULT 0,
+  record_version INT UNSIGNED NOT NULL DEFAULT 1,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (character_id),
+  UNIQUE KEY uq_character_name (name),
+  KEY ix_character_account (account_id)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS inventory (
+  character_id BIGINT UNSIGNED NOT NULL,
+  slot SMALLINT UNSIGNED NOT NULL,
+  item_id BIGINT UNSIGNED NOT NULL,
+  quantity INT UNSIGNED NOT NULL DEFAULT 1,
+  durability INT UNSIGNED NOT NULL DEFAULT 0,
+  PRIMARY KEY (character_id, slot),
+  KEY ix_inventory_item (item_id)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS guilds (
+  guild_id BIGINT UNSIGNED NOT NULL,
+  name VARCHAR(64) NOT NULL,
+  leader_character_id BIGINT UNSIGNED NOT NULL,
+  bank_currency BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  record_version INT UNSIGNED NOT NULL DEFAULT 1,
+  PRIMARY KEY (guild_id),
+  UNIQUE KEY uq_guild_name (name)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS world_state (
+  state_key VARCHAR(64) NOT NULL,
+  state_value BLOB NOT NULL,
+  record_version INT UNSIGNED NOT NULL DEFAULT 1,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (state_key)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS journal (
+  sequence_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  record_type SMALLINT UNSIGNED NOT NULL,
+  record_id BIGINT UNSIGNED NOT NULL,
+  payload BLOB NOT NULL,
+  checksum SMALLINT UNSIGNED NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (sequence_id),
+  KEY ix_journal_record (record_type, record_id)
+) ENGINE=InnoDB;
