@@ -1,0 +1,5 @@
+; Death, corpse and recovery rules
+DEATH_PROCESS: RTS
+CORPSE_CREATE: RTS
+RESPAWN_SELECT: RTS
+DEATH_PENALTY: RTS
