@@ -1,0 +1,10 @@
+; Crash-recovery coordinator
+RECOVERY_INIT:
+        JSR JOURNAL_RECOVER
+        RTS
+RECOVERY_CHECK:
+        JSR SERIALIZE_VALIDATE
+        RTS
+RECOVERY_FLUSH:
+        JSR JOURNAL_COMMIT
+        RTS
