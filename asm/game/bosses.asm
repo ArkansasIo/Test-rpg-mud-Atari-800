@@ -1,0 +1,5 @@
+; Encounter and boss state machines
+BOSS_START: RTS
+BOSS_PHASE: RTS
+BOSS_ABILITY: RTS
+BOSS_DEFEAT: RTS
