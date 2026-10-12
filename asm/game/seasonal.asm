@@ -1,0 +1,4 @@
+; Seasonal content
+SEASON_START: RTS
+SEASON_REWARD: RTS
+SEASON_END: RTS
