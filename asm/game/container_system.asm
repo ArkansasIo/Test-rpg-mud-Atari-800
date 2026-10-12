@@ -1,0 +1,4 @@
+; Object containers and capacity
+CONTAINER_INSERT: RTS
+CONTAINER_REMOVE: RTS
+CONTAINER_WEIGHT: RTS
