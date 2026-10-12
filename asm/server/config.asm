@@ -1,0 +1,4 @@
+; Runtime configuration loader
+CONFIG_DEFAULTS: RTS
+CONFIG_LOAD: RTS
+CONFIG_VALIDATE: RTS
