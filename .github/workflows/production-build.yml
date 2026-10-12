@@ -1,0 +1,28 @@
+name: RPGMUD Production Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  source-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate generated tree
+        run: python3 tools/validate_manifest.py
+      - name: Validate VM64 source
+        run: python3 tools/build_vm64.py
+      - name: Run deterministic smoke tests
+        run: python3 tests/run_smoke.py
+
+  atari800-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install cc65
+        run: sudo apt-get update && sudo apt-get install -y cc65
+      - name: Assemble Atari client
+        run: bash tools/build_6502.sh
