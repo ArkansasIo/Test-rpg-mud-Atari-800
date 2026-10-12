@@ -1,0 +1,4 @@
+; Encounter threat/aggro
+THREAT_ADD: RTS
+THREAT_REMOVE: RTS
+THREAT_SELECT: RTS
