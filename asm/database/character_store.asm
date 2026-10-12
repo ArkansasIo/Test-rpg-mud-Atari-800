@@ -1,0 +1,10 @@
+; Character persistence service
+CHAR_LOAD: JSR SERIALIZE_VALIDATE
+        RTS
+CHAR_SAVE: JSR DB_TXN_BEGIN
+        JSR JOURNAL_WRITE
+        JSR DB_TXN_COMMIT
+        RTS
+CHAR_DELETE: JSR DB_TXN_BEGIN
+        JSR DB_TXN_COMMIT
+        RTS
