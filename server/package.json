@@ -1,0 +1,1 @@
+{"name":"test-rpg-mud-atari-800-server","private":true,"type":"module","scripts":{"start":"node src/index.js","test":"node --test"},"engines":{"node":">=24"}}
