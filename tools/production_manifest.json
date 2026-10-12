@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "generator": "tools/generate_project_tree.py",
+  "files": [
+    {"path":"asm/server/guild_engine.asm","kind":"asm","name":"guild_engine"},
+    {"path":"asm/server/pvp_engine.asm","kind":"asm","name":"pvp_engine"},
+    {"path":"asm/client/ui_state.asm","kind":"asm","name":"ui_state"},
+    {"path":"asm/client/audio_dispatch.asm","kind":"asm","name":"audio_dispatch"},
+    {"path":"tests/asm/test_queues.asm","kind":"test","name":"queues"},
+    {"path":"tests/asm/test_persistence.asm","kind":"test","name":"persistence"},
+    {"path":"tests/asm/test_protocol.asm","kind":"test","name":"protocol"},
+    {"path":"tests/asm/test_end_to_end.asm","kind":"test","name":"end_to_end"},
+    {"path":"config/rpgmud-production.cfg.example","kind":"cfg","name":"RPGMUD Production Configuration"},
+    {"path":"docs/generated-tree.md","kind":"md","name":"Generated Production Tree"}
+  ]
+}
