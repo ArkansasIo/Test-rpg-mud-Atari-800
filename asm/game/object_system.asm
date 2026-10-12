@@ -1,0 +1,6 @@
+; Object prototypes, containers and equipment
+OBJECT_LOAD_PROTO: RTS
+OBJECT_CREATE: RTS
+OBJECT_MOVE: RTS
+OBJECT_EQUIP: RTS
+OBJECT_UNEQUIP: RTS
