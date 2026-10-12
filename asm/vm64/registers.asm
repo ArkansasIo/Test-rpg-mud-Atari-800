@@ -1,0 +1,16 @@
+; RPGMUD-64 register file
+VM_REG_COUNT=16
+VM_REG_BYTES=8
+VM_REGS:.res 128
+VM_REG_PC=128
+VM_REG_SP=136
+VM_REG_FLAGS=144
+VM_REG_RESET:
+        LDX #0
+        LDA #0
+VR_LOOP:
+        STA VM_REGS,X
+        INX
+        CPX #152
+        BNE VR_LOOP
+        RTS
