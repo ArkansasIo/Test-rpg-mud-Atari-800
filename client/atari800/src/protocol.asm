@@ -1,0 +1,9 @@
+; RPGMUD/1 line protocol constants for Atari 800.
+PROTO_VERSION = 1
+CMD_LOOK = 1
+CMD_MOVE = 2
+CMD_SAY = 3
+CMD_ATTACK = 4
+CMD_INVENTORY = 5
+CMD_WHO = 6
+CMD_QUIT = 7
