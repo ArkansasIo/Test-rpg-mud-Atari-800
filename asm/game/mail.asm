@@ -1,0 +1,4 @@
+; Persistent player mail
+MAIL_INDEX: RTS
+MAIL_DELIVER: RTS
+MAIL_DELETE: RTS
