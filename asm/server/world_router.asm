@@ -1,0 +1,5 @@
+; Zone and instance routing
+ROUTE_ROOM: RTS
+ROUTE_ZONE: RTS
+ROUTE_INSTANCE: RTS
+ROUTE_PLAYER: RTS
