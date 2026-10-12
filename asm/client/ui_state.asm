@@ -1,0 +1,16 @@
+; Atari client UI state machine
+UI_MODE_LOGIN=0
+UI_MODE_WORLD=1
+UI_MODE_INVENTORY=2
+UI_MODE_CHAT=3
+UI_MODE_STATUS=4
+UI_MODE:.byte UI_MODE_LOGIN
+UI_SET_MODE:
+        CMP #UI_MODE_STATUS+1
+        BCS UI_BAD
+        STA UI_MODE
+        LDA #0
+        RTS
+UI_BAD:
+        LDA #1
+        RTS
