@@ -1,0 +1,7 @@
+; Server entry and service vectors
+SERVER_INIT = $01
+SESSION_POLL = $04
+COMMAND_DISPATCH = $07
+WORLD_TICK = $0A
+COMBAT_TICK = $0D
+DB_FLUSH = $10
