@@ -1,0 +1,4 @@
+; Ability definitions and execution
+ABILITY_VALIDATE: RTS
+ABILITY_EXECUTE: RTS
+ABILITY_COOLDOWN: RTS
