@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "batches": [
+    {"id":"VM-01","scope":"vm64","paths":["asm/vm64/"]},
+    {"id":"SRV-01","scope":"server","paths":["asm/server/"]},
+    {"id":"DB-01","scope":"database","paths":["asm/database/"]},
+    {"id":"GAME-01","scope":"gameplay","paths":["asm/game/"]},
+    {"id":"CLIENT-01","scope":"atari-client","paths":["asm/client/","client/atari800/"]},
+    {"id":"PROTO-01","scope":"protocol","paths":["asm/protocol/","shared/protocol/"]},
+    {"id":"TEST-01","scope":"validation","paths":["tests/"]},
+    {"id":"OPS-01","scope":"deployment","paths":["config/","docs/","tools/"]}
+  ]
+}
