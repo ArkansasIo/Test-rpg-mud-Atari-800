@@ -1,0 +1,4 @@
+; Equipment slot validation and derived stats
+EQUIPMENT_SLOT_CHECK: RTS
+EQUIPMENT_APPLY_STATS: RTS
+EQUIPMENT_WEIGHT: RTS
