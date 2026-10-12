@@ -1,0 +1,4 @@
+; World time and weather state
+WORLD_TIME_ADVANCE: RTS
+WEATHER_UPDATE: RTS
+WEATHER_BROADCAST: RTS
