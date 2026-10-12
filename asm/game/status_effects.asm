@@ -1,0 +1,5 @@
+; Buff/debuff and crowd-control states
+EFFECT_APPLY: RTS
+EFFECT_REMOVE: RTS
+EFFECT_TICK: RTS
+EFFECT_DISPEL: RTS
