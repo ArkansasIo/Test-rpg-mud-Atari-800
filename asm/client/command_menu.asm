@@ -1,6 +1,19 @@
-; Compact command/menu system
+; Compact Atari command/menu system
+MENU_STATUS_ID=1
+MENU_QUEST_ID=2
+MENU_INVENTORY_ID=3
+MENU_SOCIAL_ID=4
+MENU_WORLD_ID=5
+MENU_COUNT=5
 MENU_STATUS: RTS
 MENU_QUEST: RTS
 MENU_INVENTORY: RTS
 MENU_SOCIAL: RTS
 MENU_WORLD: RTS
+MENU_LOOKUP:
+        CMP #MENU_COUNT+1
+        BCS ML_BAD
+        RTS
+ML_BAD:
+        LDA #0
+        RTS
