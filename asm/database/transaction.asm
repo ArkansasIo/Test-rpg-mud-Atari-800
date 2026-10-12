@@ -1,0 +1,7 @@
+; Persistence transaction boundary
+DB_TXN_BEGIN: JSR JOURNAL_BEGIN
+        RTS
+DB_TXN_COMMIT: JSR JOURNAL_COMMIT
+        RTS
+DB_TXN_ROLLBACK: JSR JOURNAL_RECOVER
+        RTS
