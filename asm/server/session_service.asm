@@ -1,13 +1,31 @@
-; Session lifecycle
+; Authoritative session lifecycle
+SESSION_STATE_FREE=0
+SESSION_STATE_AUTH=1
+SESSION_STATE_WORLD=2
+SESSION_STATE_CLOSING=3
 SESSION_NEW:
         JSR DESCRIPTOR_ALLOC
         RTS
+SESSION_AUTHENTICATED:
+        CPX #DESCRIPTOR_MAX
+        BCS SA_BAD
+        LDA #SESSION_STATE_AUTH
+        STA DESC_STATE,X
+        LDA #0
+        RTS
+SA_BAD:
+        LDA #1
+        RTS
+SESSION_ENTER_WORLD:
+        CPX #DESCRIPTOR_MAX
+        BCS SEW_BAD
+        LDA #SESSION_STATE_WORLD
+        STA DESC_STATE,X
+        LDA #0
+        RTS
+SEW_BAD:
+        LDA #1
+        RTS
 SESSION_CLOSE:
         JSR DESCRIPTOR_RELEASE
-        RTS
-SESSION_INPUT:
-        JSR INPUTQ_PUSH
-        RTS
-SESSION_OUTPUT:
-        JSR OUTPUTQ_PUSH
         RTS
