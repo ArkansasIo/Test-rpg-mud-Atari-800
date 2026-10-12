@@ -1,0 +1,5 @@
+; Deterministic combat engine boundary
+COMBAT_ROLL: RTS
+COMBAT_CALCULATE: RTS
+COMBAT_APPLY: RTS
+COMBAT_DEATH: RTS
