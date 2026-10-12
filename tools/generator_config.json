@@ -1,0 +1,23 @@
+{
+  "generator": "rpgmud-procedural",
+  "version": 1,
+  "seed": 20261011,
+  "schema_version": 1,
+  "counts": {
+    "zones": 8,
+    "rooms_per_zone": 16,
+    "npcs_per_zone": 8,
+    "items": 32,
+    "quests": 16,
+    "encounters": 16
+  },
+  "output": "data/generated",
+  "domains": [
+    "zones",
+    "rooms",
+    "npcs",
+    "items",
+    "quests",
+    "encounters"
+  ]
+}
