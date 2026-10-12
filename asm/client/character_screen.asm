@@ -1,0 +1,5 @@
+; Character information screen
+CHAR_SCREEN: RTS
+CHAR_EQUIPMENT: RTS
+CHAR_STATS: RTS
+CHAR_TALENTS: RTS
