@@ -1,0 +1,14 @@
+; Top-level RPGMUD subsystem integration
+SERVER_SUBSYSTEM_INIT:
+        JSR VM_BOOT
+        JSR NET_INIT
+        JSR RECOVERY_INIT
+        JSR INVENTORY_INIT
+        JSR STATS_INIT
+        JSR EVENT_CLEAR
+        RTS
+SERVER_SUBSYSTEM_TICK:
+        JSR GAME_TICK
+        JSR EVENT_TICK
+        JSR RECOVERY_FLUSH
+        RTS
