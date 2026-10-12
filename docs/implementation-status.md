@@ -1,25 +1,48 @@
 # Implementation Status
 
-The repository now has a broad assembly-first module map for a CircleMUD-style engine and an original fantasy MMORPG layer.
+## Completed implementation boundaries
 
-## Present
-- module files and subsystem entry points
-- shared protocol/event identifiers
-- architecture and porting notes
-- original fantasy setting and MMORPG feature taxonomy
-- persistence interfaces and database record-size conventions
-- client/server separation
+- VM opcode dispatch boundary
+- VM syscall validation
+- session state transitions
+- command rate limiting
+- transaction state transitions
+- combat calculation primitive
+- world movement primitive
+- quest lifecycle primitive
+- economy balance operations
+- protocol frame validation
+- client UI state transitions
+- client audio event dispatch
+- runtime smoke-test paths
 
-## Not yet complete
-- many assembly entry points are stubs
-- concrete target ABI, memory map, VM instruction encoding and I/O device implementation
-- a working TCP/Telnet adapter for the selected server host
-- complete room/mobile/object file parsers
-- end-to-end command parsing and dispatch
-- real authentication and production-grade cryptography
-- complete combat, spell, quest, shop and economy algorithms
-- full database implementation and crash-recovery testing
-- deterministic automated tests and a verified build
+## Infrastructure
 
-## Porting rule
-Implement a clean-room functional equivalent by subsystem. Do not copy the original CircleMUD C source verbatim. Maintain a traceability matrix between upstream behavior and the assembly implementation, and verify licensing before using upstream assets or data.
+- manifest-driven source generation;
+- generated-tree validation;
+- VM source validation;
+- Atari 6502 build entry point;
+- GitHub Actions production workflow.
+
+## In progress
+
+- complete VM instruction semantics;
+- real linker configuration and executable image;
+- full network transport;
+- authentication and account storage;
+- durable record stores;
+- complete gameplay algorithms;
+- deterministic RNG;
+- end-to-end client/server execution;
+- production deployment.
+
+## Definition of done
+
+A subsystem is complete only when it has:
+- documented interface;
+- data layout;
+- implementation;
+- error behavior;
+- tests;
+- integration point;
+- build coverage.
