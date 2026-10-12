@@ -1,0 +1,4 @@
+; Per-session command rate limiting
+RATE_LIMIT_CHECK: RTS
+RATE_LIMIT_CHARGE: RTS
+RATE_LIMIT_RESET: RTS
